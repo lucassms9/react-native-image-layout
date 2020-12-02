@@ -22,6 +22,7 @@ class ImageLayout extends React.PureComponent {
     initialColToRender: PropTypes.number,
     initialNumInColsToRender: PropTypes.number,
     sorted: PropTypes.bool,
+    backgroundColor: PropTypes.string,
     masonryFlatListColProps: PropTypes.object,
     renderMainHeader: PropTypes.func,
     renderMainFooter: PropTypes.func,
@@ -82,7 +83,8 @@ class ImageLayout extends React.PureComponent {
 		spacing: 1,
 		initialColToRender: null,
 		initialNumInColsToRender: 1,
-		sorted: false,
+    sorted: false,
+    backgroundColor: '#fff',
 		imageContainerStyle: {},
     onEndReachedThreshold: 0.8,
     sensitivePageScroll: false,
@@ -153,6 +155,7 @@ class ImageLayout extends React.PureComponent {
           initialColToRender={this.props.initialColToRender}
 					initialNumInColsToRender={this.props.initialNumInColsToRender}
           sorted={this.props.sorted}
+          backgroundColor={this.props.backgroundColor}
           onLongPressImage={this.props.onLongPressImage}
           imageContainerStyle={this.props.imageContainerStyle}
           renderIndividualMasonryHeader={this.props.renderIndividualMasonryHeader}
